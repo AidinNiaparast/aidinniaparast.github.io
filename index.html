@@ -24,9 +24,10 @@
     html,body{height:100%}
     body { margin: 0; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
     .wrap { max-width: 880px; margin: 0 auto; padding: 40px 20px 80px; }
-    header { display: grid; grid-template-columns: 200px 1fr; gap: 22px; align-items: center; margin-bottom: 26px; }
+    header { display: grid; grid-template-columns: 200px 1fr; gap: 22px; align-items: center; margin-bottom: 10px; }
     .avatar { width: 200px; height: 200px; border-radius: 16px; object-fit: cover; background: var(--card); border: 1px solid rgba(0,0,0,.06); }
     @media (prefers-color-scheme: dark) { .avatar{border-color:rgba(255,255,255,.08);} }
+    .header-links { display:flex; justify-content:center; gap: 12px; flex-wrap:wrap; margin-top:10px; }
     h1 { font-size: 28px; line-height: 1.15; margin: 0 0 6px; }
     section { margin-top: 34px; padding-top: 8px; }
     section h2 { font-size: 20px; letter-spacing:.2px; margin: 12px 0 12px; border-bottom: 1px solid rgba(0,0,0,.08); padding-bottom: 8px; }
@@ -39,9 +40,9 @@
     .pub-title { font-weight: 700; }
     .pub-venue { color: var(--muted); font-weight: 600; }
     .pub-authors { margin-top: 2px; }
-    a { color: var(--link); }
-    .links { display:flex; gap: 10px; flex-wrap: wrap; }
-    .pill { display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background: var(--card); border:1px solid rgba(0,0,0,.06); }
+    a { color: var(--link); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background: var(--card); border:1px solid rgba(0,0,0,.06); font-weight:500; }
     @media (prefers-color-scheme: dark) { .pill{border-color:rgba(255,255,255,.08);} }
     .grid-2 { display:grid; grid-template-columns: 1fr; gap: 14px; }
     @media (min-width: 760px){ .grid-2{grid-template-columns: 1fr 1fr;} }
@@ -60,6 +61,13 @@
       </div>
     </header>
 
+    <div class="header-links">
+      <span class="pill">📧 <a href="mailto:aniapara@andrew.cmu.edu">aniapara@andrew.cmu.edu</a></span>
+      <span class="pill">🎓 <a href="https://scholar.google.com/citations?user=6AIBmYAAAAAJ" target="_blank">Google Scholar</a></span>
+      <span class="pill">💻 <a href="https://github.com/AidinNiaparast" target="_blank">GitHub</a></span>
+      <span class="pill">🔗 <a href="https://www.linkedin.com/in/aidin-niaparast/" target="_blank">LinkedIn</a></span>
+    </div>
+
     <section id="about">
       <p class="lead">Hi! I am a fifth-year Ph.D. candidate in the interdisciplinary <a href="https://www.cmu.edu/math/aco/index.html"><strong>Algorithms, Combinatorics, and Optimization (ACO)</strong></a> doctoral program at the <strong>Tepper School of Business</strong>, <strong>Carnegie Mellon University</strong>. I am fortunate to be advised by <a href="https://scholars.cmu.edu/4018-r-ravi">Prof. R. Ravi</a> and <a href="https://scholars.cmu.edu/8273-ben-moseley">Prof. Benjamin Moseley</a>. My work centers on <strong>optimization under uncertainty</strong>, focusing on <strong>online</strong> and <strong>learning-augmented algorithms</strong>.</p>
       <p><span class="pill">News</span> <strong>I am on the job market in 2025–26 — please reach out if you think my work would be a good fit!</strong></p>
@@ -69,7 +77,7 @@
       <h2>Honors and Awards</h2>
       <ul class="awards">
         <li class="card">Tepper School of Business Presidential Fellowship, Carnegie Mellon University (2024–2025)</li>
-        <li class="card">NeurIPS Spotlight Paper (2023)</li>
+        <li class="card">Neural Information Processing Systems Spotlight Paper (top 3% of accepted papers, 2023)</li>
         <li class="card">William Larimer Mellon Fellowship, Carnegie Mellon University (2022–2026)</li>
         <li class="card">Ranked 1st in the National University Entrance Exam in Iran for M.Sc. in Computer Science (2021)</li>
         <li class="card">Silver Medal in Iranian National Olympiad in Informatics (2015)</li>
@@ -82,37 +90,37 @@
         <li class="card">
           <div class="pub-title">Incremental Approximate Single-Source Shortest Paths with Predictions</div>
           <div class="pub-authors">Samuel McCauley, Benjamin Moseley, Aidin Niaparast, Helia Niaparast, Shikha Singh</div>
-          <div class="pub-venue">ICALP 2025. <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.117">Link</a></div>
+          <div class="pub-venue">International Colloquium on Automata, Languages, and Programming (ICALP), <a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2025.117">Link</a></div>
         </li>
         <li class="card">
           <div class="pub-title">Putting Off the Catching Up: Online Joint Replenishment Problem with Holding and Backlog Costs</div>
           <div class="pub-authors">Benjamin Moseley, Aidin Niaparast, R. Ravi</div>
-          <div class="pub-venue">SODA 2025. <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.130">Link</a></div>
+          <div class="pub-venue">ACM-SIAM Symposium on Discrete Algorithms (SODA), <a href="https://epubs.siam.org/doi/10.1137/1.9781611978322.130">Link</a></div>
         </li>
         <li class="card">
           <div class="pub-title">Binary Search with Distributional Predictions</div>
           <div class="pub-authors">Michael Dinitz, Sungjin Im, Thomas Lavastida, Benjamin Moseley, Aidin Niaparast, Sergei Vassilvitskii</div>
-          <div class="pub-venue">NeurIPS 2024. <a href="https://openreview.net/pdf?id=JEKXTLjEIq">Link</a></div>
+          <div class="pub-venue">Neural Information Processing Systems (NeurIPS), <a href="https://openreview.net/pdf?id=JEKXTLjEIq">Link</a></div>
         </li>
         <li class="card">
           <div class="pub-title">Incremental Topological Ordering and Cycle Detection with Predictions</div>
           <div class="pub-authors">Samuel McCauley, Benjamin Moseley, Aidin Niaparast, Shikha Singh</div>
-          <div class="pub-venue">ICML 2024. <a href="https://proceedings.mlr.press/v235/mccauley24a.html">Link</a></div>
+          <div class="pub-venue">International Conference on Machine Learning (ICML), <a href="https://proceedings.mlr.press/v235/mccauley24a.html">Link</a></div>
         </li>
         <li class="card">
           <div class="pub-title">Online List Labeling with Predictions</div>
           <div class="pub-authors">Samuel McCauley, Benjamin Moseley, Aidin Niaparast, Shikha Singh</div>
-          <div class="pub-venue">NeurIPS 2023 (Spotlight; top 3% of accepted papers). <a href="https://openreview.net/forum?id=z37ki6nqAY">Link</a></div>
+          <div class="pub-venue">Neural Information Processing Systems (NeurIPS), <a href="https://openreview.net/forum?id=z37ki6nqAY">Link</a><br><strong>Spotlight; top 3% of accepted papers</strong></div>
         </li>
         <li class="card">
           <div class="pub-title">Timeliness Through Telephones: Approximating Information Freshness in Vector Clock Models</div>
           <div class="pub-authors">Da Qi Chen, Lin An, Aidin Niaparast, R. Ravi, Oleksandr Rudenko</div>
-          <div class="pub-venue">SODA 2023. <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977554.ch93">Link</a></div>
+          <div class="pub-venue">ACM-SIAM Symposium on Discrete Algorithms (SODA), <a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611977554.ch93">Link</a></div>
         </li>
         <li class="card">
           <div class="pub-title">On a Question of Haemers Regarding Vectors in the Nullspace of Seidel Matrices</div>
           <div class="pub-authors">Saieed Akbari, Sebastian M. Cioabă, Samira Goudarzi, Aidin Niaparast, Artin Tajdini</div>
-          <div class="pub-venue">Linear Algebra and Its Applications, 2021. <a href="https://www.sciencedirect.com/science/article/pii/S0024379521000057">Link</a></div>
+          <div class="pub-venue">Linear Algebra and Its Applications, <a href="https://www.sciencedirect.com/science/article/pii/S0024379521000057">Link</a></div>
         </li>
       </ul>
     </section>
@@ -156,13 +164,7 @@
     </section>
 
     <footer>
-      <div class="links">
-        <span class="pill">📧 <a href="mailto:aniapara@andrew.cmu.edu">aniapara@andrew.cmu.edu</a></span>
-        <span class="pill">🎓 <a href="https://scholar.google.com/citations?user=6AIBmYAAAAAJ">Google Scholar</a></span>
-        <span class="pill">💻 <a href="https://github.com/AidinNiaparast">GitHub</a></span>
-        <span class="pill">🔗 <a href="https://www.linkedin.com/in/aidin-niaparast/">LinkedIn</a></span>
-      </div>
-      <p style="margin-top:10px;">Last updated: October 2025</p>
+      <p style="margin-top:10px; color: var(--muted);">Last updated: October 2025</p>
     </footer>
   </div>
 </body>
